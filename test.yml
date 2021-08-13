@@ -1,0 +1,44 @@
+# yaml stores data in key value pair similar to github 
+name: sanjay
+age: 22
+DOB:
+    day: 31
+    month: may
+    year: 1999
+    place:
+        country : India
+        city: Bangalore
+        
+jsonObject: { name: sanjay, age: 22}
+
+array:
+    - item1
+    - item2
+    - item3
+    - {key: value}
+
+arrayOfObjects:
+    - key1: value1
+      key2: value2
+    - key1: value1
+      key2: value2
+    
+longText: rggrjnejnfsj enafdnjgrvgnonego qejfjwjj  eqdfejkfwkj
+
+newlongText: >
+    dscvksvfsnvfnvf jnwjwjwvfk ahb kajenje
+    hjvvhfhfvhbahbaahb njrnjvfnevfnjevfnjevfnjevfn
+    ckjkvdkvjjvkjvnwjvwjwvb
+    kv dkjvk vfj v vjf kf jksjk fsjkf jf skjf kvjf 
+    kvj vkjvkj vkjvk jv kajenje
+
+newlongText1: |
+    dscvksvfsnvfnvf jnwjwjwvfk ahb kajenje
+    hjvvhfhfvhbahbaahb njrnjvfnevfnjevfnjevfnjevfn
+    ckjkvdkvjjvkjvnwjvwjwvb
+    kv dkjvk vfj v vjf kf jksjk fsjkf jf skjf kvjf 
+    kvj vkjvkj vkjvk jv kajenje
+    
+
+    
+  
