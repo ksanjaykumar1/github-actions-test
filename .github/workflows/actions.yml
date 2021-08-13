@@ -1,0 +1,20 @@
+name: Actions workflow
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: simple JS Action
+      # inorder to reference a step we need to give it a id
+      - id: greet
+      # referencing a version is better than the branch, 
+      # branch maybe updated continously , this may cause breaking changes
+      # commit id is the safest
+        uses: actions/hello-world-javascript-action@v1.1
+      # we provide input to action with keyword "with"
+        with:
+          who-to-greet: Sanjay
+      - name: Log Greeting time
+        run: echo "${{ steps.greet.outputs.time}}"
+
