@@ -5,6 +5,10 @@ jobs:
   run-github-actions:
     runs-on: ubuntu-latest
     steps:
+      - name: List Files
+        run: |
+          pwd
+          ls
       - name: simple JS Action
       # inorder to reference a step we need to give it a id
         id: greet
