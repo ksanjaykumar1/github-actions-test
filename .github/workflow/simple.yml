@@ -1,0 +1,19 @@
+name: Shell Commands
+
+# on which even to run this workflow
+on: [push]
+
+#defining job
+jobs:
+  run-shell-commands:
+    runs-on: ubuntu-lates
+    steps:
+      - name: echo a string
+        run: echo "Hello world"
+      - name: multiline script
+        run: |
+          node -v
+          npm -v
+
+          
+
