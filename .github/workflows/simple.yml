@@ -6,7 +6,7 @@ on: [push]
 #defining job
 jobs:
   run-shell-commands:
-    runs-on: ubuntu-lates
+    runs-on: ubuntu-latest
     steps:
       - name: echo a string
         run: echo "Hello world"
