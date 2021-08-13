@@ -11,6 +11,10 @@ jobs:
           ls
       - name: Checkout
         uses: actions/checkout@v1
+      - name: List Files after checkout
+        run: |
+          pwd
+          ls -a
       - name: simple JS Action
       # inorder to reference a step we need to give it a id
         id: greet
