@@ -7,7 +7,7 @@ on:
   pull_request:
     types: [closed,assigned,opened,reopened]
   repository_dispatch:
-    types: ['build']
+    types: [build]
 jobs:
   run-github-actions:
     runs-on: ubuntu-latest
