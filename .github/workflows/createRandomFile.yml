@@ -13,7 +13,7 @@ jobs:
         run: git init .
       - name: pull your github repo
         run: |
-          git add remote origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+          git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
           git config --global user.email "my-bot@bot.com"
           git config --global user.name "my-bot"
           git fetch
@@ -31,5 +31,5 @@ jobs:
           git add -A
           git commit -m "added random number to file"
           git push
-          
+
         
