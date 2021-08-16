@@ -19,7 +19,7 @@ jobs:
           git fetch
           ls -a
           git checkout main
-          git brach --set-upstream-to=origin/main
+          git branch --set-upstream-to=origin/main
           git pull
           ls -a 
       - name: Generate a file with random number
