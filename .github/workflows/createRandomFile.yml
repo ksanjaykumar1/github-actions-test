@@ -1,0 +1,35 @@
+name: Create a Random Files
+on: [push]
+
+jobs:
+  create-random-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get the present directory and list all files
+        run: |
+          pwd
+          ls -a
+      - name: git initalize
+        run: git init .
+      - name: pull your github repo
+        run: |
+          git add remote origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+          git config --global user.email "my-bot@bot.com"
+          git config --global user.name "my-bot"
+          git fetch
+          ls -a
+          git checkout main
+          git brach --set-upstream-to=origin/main
+          git pull
+          ls -a 
+      - name: Generate a file with random number
+        run: | 
+          echo $RANDOM >> random.txt
+          ls -a
+      - name: push random.txt file to repo
+        run: |
+          git add -A
+          git commit -m "added random number to file"
+          git push
+          
+        
