@@ -1,0 +1,16 @@
+name: Decrypt the file
+on: push
+
+jobs:
+  decrypt-file:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone repo using checkout action
+        uses: actions/checkout@v1
+      - name: decrypt the file
+        env:
+          DECRYPT_PHRASE: ${{secrets.DECRYPT_PHRASE}}
+        run: gpg --quiet --batch --yes --decrypt --passphrase="$DECRYPT_PHRASE" --output $HOME/secret.json mysecret.json.gpg
+      - name: Print our file conten
+        run: cat $HOME/secret.json
+        
