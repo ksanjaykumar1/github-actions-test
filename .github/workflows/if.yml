@@ -1,4 +1,4 @@
-name: Context
+name: If
 on: [push,pull_request]
 
 jobs:
